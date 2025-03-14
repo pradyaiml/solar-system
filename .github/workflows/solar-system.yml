@@ -6,7 +6,12 @@ on:
     branches:
       - main
       - 'feature/*'
-    
+
+env:
+  MONGO_URI: "mongodb+srv://cluster0.cu2ye.mongodb.net/solardb"
+  MONGO_USERNAME: pradyaiml
+  MONGO_PASSWORD: 5nENb8vWsnu3G7xQ  
+
 jobs:
     unit-testing:
         name: Unit Testing
