@@ -12,10 +12,16 @@ env:
   MONGO_USERNAME: ${{ vars.MONGO_USERNAME }}
   MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
 
+  
+
 jobs:
     unit-testing:
         name: Unit Testing
-        runs-on: ubuntu-latest
+
+        strategy:
+          matrix:
+            node-version: [20.x]
+        runs-on: ${{ matrix.node-version }}
         steps:
         - name: Checkout Repository
           uses: actions/checkout@v4
