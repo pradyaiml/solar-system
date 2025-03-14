@@ -10,7 +10,7 @@ on:
 env:
   MONGO_URI: "mongodb+srv://cluster0.cu2ye.mongodb.net/solardb"
   MONGO_USERNAME: ${{ vars.MONGO_USERNAME }}
-  MONGO_PASSWORD: ${{ secrets.MOMGO_PASSWORD }}
+  MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
 
 jobs:
     unit-testing:
